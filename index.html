@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0f7fa; /* 淡蓝色背景 */
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #42b983; /* Vue 绿色 */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #42b983, #66cc99);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .post-title a {
+            color: #42b983; /* 绿色标题链接 */
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            text-decoration: underline;
+        }
+
+        .post-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .post-content {
+            margin-bottom: 20px;
+        }
+
+        .about {
+            background-color: #f0f4c3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .about h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 40px;
+            background-color: #42b983; /* Vue 绿色 */
+            border-radius: 8px;
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的博客</h1>
+        <nav>
+            <a href="#home">首页</a>
+            <a href="#archive">归档</a>
+            <a href="#about">关于</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>欢迎来到我的博客！</h2>
+        <p>分享生活，记录成长，探索未知的世界。</p>
+    </section>
+
+    <main>
+        <section class="about" id="about">
+            <h2>关于我</h2>
+            <p>你好！我是一个热爱技术和写作的博主。在这里，你将看到我的学习笔记、生活记录和一些有趣的发现。希望我们可以一起成长和进步。</p>
+        </section>
+
+        <article class="blog-post">
+            <h2 class="post-title"><a href="post1.html">欢迎来到我的博客</a></h2>
+            <div class="post-date">2024年11月1日</div>
+            <div class="post-content">
+                <p>这是我的第一篇博客文章。你可以在这里分享你的想法、经验和故事。</p>
+                <p>这个博客模板采用简洁的设计，突出内容的可读性。你可以轻松地修改样式和添加新的功能。</p>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <h2 class="post-title"><a href="post2.html">第二篇文章</a></h2>
+            <div class="post-date">2024年11月1日</div>
+            <div class="post-content">
+                <p>大数据的实验报告</p>
+                <p>写着写着写飞了，已经写成深度学习报告了。</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 我的博客. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">微博</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
