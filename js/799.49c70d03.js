@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue_blog"]=self["webpackChunkvue_blog"]||[]).push([[799],{4799:function(u,n,e){e.r(n),e.d(n,{default:function(){return s}});var t=e(6768);const r={class:"about"};function a(u,n,e,a,l,c){return(0,t.uX)(),(0,t.CE)("div",r,n[0]||(n[0]=[(0,t.Lk)("h2",null,"关于我",-1),(0,t.Lk)("p",null,"这是一个耗时0.00001h做的水的不能再水的纯前端网页，没啥好说的，因为他实在太水了。",-1)]))}var l={name:"AboutPage"},c=e(1241);const o=(0,c.A)(l,[["render",a]]);var s=o}}]);
-//# sourceMappingURL=799.49c70d03.js.map
