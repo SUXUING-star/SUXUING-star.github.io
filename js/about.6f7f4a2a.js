@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkxingyunchaju"]=self["webpackChunkxingyunchaju"]||[]).push([[594],{3431:function(n,u,t){t.r(u),t.d(u,{default:function(){return o}});var a=t(6768);const c={class:"about"};function e(n,u,t,e,r,s){return(0,a.uX)(),(0,a.CE)("div",c,u[0]||(u[0]=[(0,a.Lk)("div",{class:"about-content"},[(0,a.Lk)("h2",null,"关于我"),(0,a.Lk)("p",null,"这是一个耗时0.00001h做的水的不能再水的纯前端网页，没啥好说的，因为他实在太水了。")],-1)]))}var r={name:"AboutPage"},s=t(1241);const l=(0,s.A)(r,[["render",e]]);var o=l}}]);
+//# sourceMappingURL=about.6f7f4a2a.js.map
