@@ -1,21 +1,31 @@
+<!-- BlogPost.vue -->
 <template>
-  <article class="blog-post">
-    <h2 class="post-title">
-      <a href="#" @click.prevent="$emit('click')">{{ post.title }}</a>
-    </h2>
-    <div class="post-date">{{ post.date }}</div>
-    <div class="post-content">
-      <p>{{ post.summary }}</p>
-    </div>
-    <div v-if="post.coverImage" class="cover-image">
+  <article class="blog-post-card" @click="$emit('click')">
+    <div class="post-image" >
       <img 
+        v-if="post.coverImage"
         :src="post.coverImage" 
         :alt="post.title"
         @error="handleImageError"
+        loading="lazy"
+      >
+      <img 
+        v-else 
+        src="/placeholder-image.gif" 
+        alt="Placeholder Image" 
+        loading="lazy"
       >
     </div>
-
-    
+    <div class="post-content">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <div class="post-meta">
+        <span class="post-date">{{ post.date }}</span>
+      </div>
+      <p class="post-summary">{{ post.summary }}</p>
+      <div class="post-footer">
+        <span class="read-more">阅读全文 →</span>
+      </div>
+    </div>
   </article>
 </template>
 
@@ -29,72 +39,91 @@ export default {
     }
   },
   methods: {
-    getImageUrl(imagePath) {
-      try {
-        return require(`@/posts/images/${imagePath}`); // 确保路径正确
-      } catch (e) {
-        console.warn(`Image not found: ${imagePath}`);
-        return '';
-      }
-    }
+    
+    
   }
 }
 </script>
 
-  
-  
-  
-  <style scoped>
-.blog-post {
-  font-family: Arial, sans-serif;
-  padding: 1rem;
-  background-color: #f9f9f9; /* 主背景色 */
-  border-radius: 8px;
+<style scoped>
+.blog-post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+  border: 1px solid #eef2f7;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover .post-image img {
+  transform: scale(1.05);
 }
 
 .post-content {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
+}
+
+.post-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.75rem;
+}
+
+.post-summary {
+  color: #4a5568;
   line-height: 1.6;
-  color: #333;
+  margin-bottom: 1rem;
+  flex: 1;
+  font-size: 0.9375rem;
 }
 
-/* 设置代码块样式 */
-.post-content pre {
-  background-color: #2e3440; /* 代码块背景色 */
-  color: #d8dee9; /* 代码块字体颜色 */
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: Consolas, monospace;
-  margin: 1.5rem 0;
+.post-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
 }
 
-/* 代码块中的代码 */
-.post-content code {
-  background-color: #3b4252;
-  color: #d8dee9;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+.read-more {
+  color: #42b883;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
-/* 行内代码 */
-.post-content p code {
-  background-color: #eceff4;
-  color: #bf616a;
-  padding: 0.2rem 0.3rem;
-  font-size: 0.9rem;
-  border-radius: 3px;
-}
-.cover-image img{
-  max-width: 70%;        /* 最大宽度为父容器的一半 */
-  height: auto;          /* 保持纵横比 */
-  display: block;        /* 确保图片是块级元素 */
-  margin-left: auto;     /* 左右居中 */
-  margin-right: auto;    /* 左右居中 */
-  
-  border: 5px solid #ccc;    /* 给图片添加边框 */
-  border-radius: 10px;        /* 圆角效果 */
-  padding: 10px;              /* 图片四周加内边距（留白） */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 添加阴影效果 */
+.read-more:hover {
+  color: #3aa876;
 }
 </style>

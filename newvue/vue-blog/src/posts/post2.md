@@ -2,6 +2,7 @@
 title: 一个简单的文本情感分析模型
 date: 2024-11-01
 summary: 这是全部的代码的描述和一些注释
+coverImage: post2/post2-1.png
 ---
 ## 自己简单爬取的数据进行分析
 ```javascript
